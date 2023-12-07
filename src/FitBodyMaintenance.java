@@ -79,7 +79,7 @@ public class FitBodyMaintenance extends Fit{
     public String getEnoughSteps(){
         int minimumSteps = 10000;
         if (minimumSteps > stepsTaken) {
-            return "You have " + stepsTaken + " out of " + minimumSteps + " recommended steps, just more " + (stepsTaken - minimumSteps) + " left!";
+            return "You have " + stepsTaken + " out of " + minimumSteps + " recommended steps, just more " + Math.abs(stepsTaken - minimumSteps) + " left!";
         } else {
             return "Amazing, keep up the good work! Doctors recommend at least 10k steps per day!";
         }
